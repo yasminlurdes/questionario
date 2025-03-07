@@ -6,15 +6,52 @@
     <title>Document</title>
 </head>
 <body>
-    <p:>Reciclar garrafas de plástico é importante porque elas podem ser transformadas em novas garrafas ou outros produtos, como roupas e utensílios de decoração?</p><br/>
-    <input type="number" id="questao-1"><br/>
-    <p:>Você pode reciclar o óleo de cozinha despejando-o no ralo da pia ou no vaso sanitário?</p>
-    <input type="number" id="questao-2"><br/>
-    <p:>Os materiais podem ser reciclados eternamente?</p><br/>
-    <input type="number" id="questao-3"><br/>
-    <p:>Os canudos de plástico representam uma pequena parte da poluição plástica nos oceanos e, portanto, não precisamos evitar seu uso no dia-a-dia?</p><br/>
-    <input type="number" id="questao-4"><br/>
-    <p:>As pilhas são consideradas recicláveis, mas existem locais corretos para o seu depósito.?</p><br/>
-    <input type="number" id="questao-5"><br/>
+    <p:>Qual a capital do Paraná?</p><br/>
+    <input type="text" id="questao-1"><br/>
+    <p:>Qual a capital do Rio de Janeiro?</p>
+    <input type="text" id="questao-2"><br/>
+    <p:>Qual a capital de Santa Catarina?</p><br/>
+    <input type="text" id="questao-3"><br/>
+    <p:>Qual a capital do Rio Grande do Sul?</p><br/>
+    <input type="text" id="questao-4"><br/>
+    <p:>Qual a capital de São Paulo?</p><br/>
+    <input type="text" id="questao-5"><br/>
+
+    <button id="verificar">Verificar</button>
+    <script>
+
+
+        let questao1 = document.getElementById("questao-1");
+        let questao2 = document.getElementById("questao-2");
+        let questao3 = document.getElementById("questao-3");
+        let questao4 = document.getElementById("questao-4");
+        let questao5 = document.getElementById("questao-5");
+        let botao = document.getElementById("verificar");
+
+        function verificarRespostas() {
+            let contador = 0;
+
+            if (questao1.value == "curitiba") {
+                contador++;
+            }
+            if (questao2.value == "rio de janeiro") {
+                contador++;
+            }
+            if (questao3.value == "florianópolis") {
+                contador++;
+            }
+            if (questao4.value == "porto alegre") {
+                contador++;
+            }
+            if (questao5.value == "são paulo") {
+                contador++;
+            }
+
+            alert(`total de acertos ${contador}`);
+            console.log(`total de acertos ${contador}`);
+        }
+
+        botao.addEventListener("click", verificarRespostas, false);
+    </script>
 </body>
 </html>
